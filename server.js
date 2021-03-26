@@ -24,6 +24,6 @@ app.get('/data', (request, response) => {
 
 
 
-app.use('*', (request, response) => response.send('Sorry, that route does not exist.'));
+app.use('*', (request, response) => response.send('index.html'));
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
