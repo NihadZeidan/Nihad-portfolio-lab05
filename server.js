@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static('./public'));
+app.use(express.static('index.html'));
 
 app.get('/hello', (request, response) => {
     response.status(200).send('Hello');
@@ -24,6 +24,6 @@ app.get('/data', (request, response) => {
 
 
 
-app.use('*', (request, response) => response.send('index.html'));
+app.use('*', (request, response) => response.send("rout not found"));
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
